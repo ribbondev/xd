@@ -1,0 +1,26 @@
+version: '2'
+
+tasks:
+
+  setup:
+    cmds:
+      - echo "todo - setup dependencies"
+    silent: true
+
+  build:
+    cmds:
+      - v xd.v
+    sources:
+      - ./*.v
+      - ./**/.v
+    generates:
+      - xd{{exeExt}}
+
+  release:
+    cmds:
+      - echo "todo - bundle release"
+    silent: true
+
+  clean:
+    cmds:
+      - rm *.exe

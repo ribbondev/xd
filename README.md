@@ -21,7 +21,24 @@ Low-fi work-in-progress BMS player with an emphasis on simplicity and out of the
 - Simple configuration
 - Cross platform
 
+## Build requirements
+- V compiler in path: http://vlang.io
+- Taskfile task runner in path: https://taskfile.dev
+
 ## Build, test & run
 ```sh
-todo
+# setup dependencies
+task setup
+
+# build
+task build # or just v xd.v
+
+# run
+v run xd.v # or just ./xd.exe
+
+# bundle release
+task release
+
+# remove generated files
+task clean
 ```
