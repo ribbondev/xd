@@ -17,12 +17,35 @@ pub mut:
 	height f32
 }
 
+pub struct C.Color {
+pub mut:
+	r byte
+	g byte
+	b byte
+	a byte
+}
+
+pub type Rectangle &C.Rectangle
+pub type Color &C.Color
+
 fn C.InitWindow(width, height int, title charptr)
 fn C.CloseWindow()
 fn C.SetTargetFPS(fps int)
 fn C.BeginDrawing()
 fn C.EndDrawing()
+fn C.ClearBackground(color Color)
+fn C.DrawText(text charptr, x, y, font_size int, color Color)
 fn C.WindowShouldClose() bool
+
+[inline]
+pub fn draw_text(text string, x, y, font_size int, color Color) {
+	C.DrawText(text.str, x, y, font_size, color)
+}
+
+[inline]
+pub fn clear_background(color Color) {
+	C.ClearBackground(color)
+}
 
 [inline]
 pub fn init_window(width, height int, title string) {
