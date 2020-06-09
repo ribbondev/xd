@@ -2,14 +2,14 @@
 Low-fi work-in-progress BMS player with an emphasis on simplicity and out of the box configuration.
 
 ## Tech
-- V language: http://vlang.io
+- Nim: http://nim-lang.org/
 - Raylib: http://raylib.com
   - Graphics
   - Fonts
   - Windowing
   - Sound
   - Input
-- ImGui or vui? https://github.com/ocornut/imgui
+- ImGui? https://github.com/ocornut/imgui
 - TOML configuration?? https://github.com/toml-lang/toml
 
 ## Design goals
@@ -22,7 +22,7 @@ Low-fi work-in-progress BMS player with an emphasis on simplicity and out of the
 - Cross platform
 
 ## Build requirements
-- V compiler in path: http://vlang.io
+- Nim compiler in path: http://nim-lang.org/
 - Taskfile task runner in path: https://taskfile.dev
 
 ## Build, test & run
@@ -31,10 +31,10 @@ Low-fi work-in-progress BMS player with an emphasis on simplicity and out of the
 task setup
 
 # build
-task build # or just v xd.v
+task build
 
 # run
-v run xd.v # or just ./xd.exe
+todo
 
 # bundle release
 task release

@@ -9,10 +9,10 @@ tasks:
 
   build:
     cmds:
-      - v xd.v
+      - echo "todo"
     sources:
-      - ./*.v
-      - ./**/.v
+      - ./*.nim
+      - ./**/.nim
     generates:
       - xd{{exeExt}}
 
