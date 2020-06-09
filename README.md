@@ -34,7 +34,7 @@ task setup
 task build
 
 # run
-todo
+task run
 
 # bundle release
 task release

@@ -4,23 +4,28 @@ tasks:
 
   setup:
     cmds:
-      - echo "todo - setup dependencies"
+      - cp deps/bin/x64/raylib.dll ./raylib.dll
     silent: true
 
   build:
     cmds:
-      - echo "todo"
+      - nim c -o:./xd.exe src/xd.nim 
     sources:
-      - ./*.nim
-      - ./**/.nim
+      - ./src/*.nim
+      - ./src/**/.nim
     generates:
       - xd{{exeExt}}
 
+  run:
+    cmds:
+      - nim c -o:./xd.exe -r src/xd.nim
+
   release:
     cmds:
-      - echo "todo - bundle release"
+      - nimble build
     silent: true
 
   clean:
     cmds:
       - rm *.exe
+      - rm ./raylib.dll
