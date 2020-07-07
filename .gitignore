@@ -50,3 +50,13 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+nimcache/
+nimblecache/
+htmldocs/
+xd
+!xd/
+tests/*
+!tests/*.nim
+*.zip
+*.tar.gz

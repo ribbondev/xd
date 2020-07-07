@@ -1,6 +1,6 @@
 # Package
 
-version = "1"
+version = "0"
 author = "lilah"
 description = "Another BMS player"
 license = "zlib"
@@ -9,4 +9,5 @@ bin = @["xd"]
 
 # Dependencies
 
-requires "nim >= 1.2.0"
+requires "nim >= 1.2.2"
+requires "yaml >= 0.13.1"

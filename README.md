@@ -1,25 +1,7 @@
 ## XD BMS player
-Low-fi work-in-progress BMS player with an emphasis on simplicity and out of the box configuration.
+Low-fi **work-in-progress** BMS player `linux` `windows` `nim` `raylib`
 
-## Tech
-- Nim: http://nim-lang.org/
-- Raylib: http://raylib.com
-  - Graphics
-  - Fonts
-  - Windowing
-  - Sound
-  - Input
-- ImGui? https://github.com/ocornut/imgui
-- TOML configuration?? https://github.com/toml-lang/toml
-
-## Design goals
-- No video support
-- No song previews
-- Fast song import
-- Minimal ui
-- Developer console
-- Simple configuration
-- Cross platform
+*Emphasis on simplicity and out of the box configuration*
 
 ## Build requirements
 - Nim compiler in path: http://nim-lang.org/
@@ -27,13 +9,19 @@ Low-fi work-in-progress BMS player with an emphasis on simplicity and out of the
 
 ## Build, test & run
 ```sh
-# setup dependencies
+# install dependencies from /deps/
 task setup
 
-# build
+# install nim dependencies
+task install
+
+# build executable
 task build
 
-# run
+# run the unit tests
+task test
+
+# build+run executable
 task run
 
 # bundle release
@@ -42,3 +30,5 @@ task release
 # remove generated files
 task clean
 ```
+
+See [here](./docs/design-notes.md) for more design detail notes.
