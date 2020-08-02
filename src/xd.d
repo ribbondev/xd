@@ -11,7 +11,9 @@ void main() {
     begin_drawing();
     clear_background(LIGHTGRAY);
     DrawText("Congrats! You created your first window!", 190, 200, 20, DARKGRAY);
-    gui_button(Rectangle(5, 5, 30, 30), "Blah");
+    if (gui_button(Rectangle(5, 5, 30, 30), "Blah")) {
+      writeln("clickerz!");
+    }
     end_drawing();
   }
   close_window();

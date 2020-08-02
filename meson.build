@@ -14,7 +14,7 @@ m = cc.find_library('m', required: false)
 raygui = static_library('raygui',
   sources: ['deps/include/raygui.c'],
   include_directories: include_directories('deps/include'),
-  c_args: '-DRAYGUI_IMPLEMENTATION')
+  c_args: ['-DRAYGUI_IMPLEMENTATION'])
 
 #########
 # sources
