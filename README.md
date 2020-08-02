@@ -1,34 +1,23 @@
 ## XD BMS player
-Low-fi **work-in-progress** BMS player `linux` `windows` `nim` `raylib`
+Low-fi **work-in-progress** BMS player `linux` `windows` `D2` `raylib`
 
 *Emphasis on simplicity and out of the box configuration*
 
 ## Build requirements
-- Nim compiler in path: http://nim-lang.org/
-- Taskfile task runner in path: https://taskfile.dev
+
+- C compiler (https://llvm.org/)
+- D2 compiler (https://dlang.org/)
+- meson: https://mesonbuild.com/
+- ninja: https://ninja-build.org/
 
 ## Build, test & run
 ```sh
-# install dependencies from /deps/
-task setup
-
-# install nim dependencies
-task install
-
-# build executable
-task build
-
-# run the unit tests
-task test
-
-# build+run executable
-task run
-
-# bundle release
-task release
-
-# remove generated files
-task clean
+# setup meson/dependencies
+just setup
+# build with meson/ninja
+just build
+# run
+just run
 ```
 
 See [here](./docs/design-notes.md) for more design detail notes.

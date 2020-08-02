@@ -60,3 +60,5 @@ tests/*
 !tests/*.nim
 *.zip
 *.tar.gz
+
+builddir/
