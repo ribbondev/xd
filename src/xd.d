@@ -1,6 +1,7 @@
 
 import std.stdio;
 import raylib.core;
+import raylib.text;
 
 void main() {
   init_window(800, 800, "blah");

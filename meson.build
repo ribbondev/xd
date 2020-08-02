@@ -13,7 +13,11 @@ m = cc.find_library('m', required: false)
 # sources
 
 exe_entry_point = ['src/xd.d']
-exe_sources = ['src/raylib/core.d']
+exe_sources = [
+  'src/raylib/core.d',
+  'src/raylib/shapes.d',
+  'src/raylib/text.d'
+]
 source_directories = ['src']
 
 ##############
