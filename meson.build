@@ -9,6 +9,11 @@ cc = meson.get_compiler('c')
 raylib = cc.find_library('raylib', dirs: meson.current_source_dir() + '/deps/lib/' + arch)
 m = cc.find_library('m', required: false)
 
+raygui = static_library('raygui',
+  sources: ['deps/include/raygui.c'],
+  include_directories: include_directories('deps/include'),
+  c_args: '-DRAYGUI_IMPLEMENTATION')
+
 #########
 # sources
 
@@ -26,4 +31,5 @@ source_directories = ['src']
 executable('xd',
   sources: exe_entry_point + exe_sources,
   include_directories: source_directories,
-  dependencies: [raylib, m])
+  dependencies: [raylib, m],
+  link_with: raygui)
