@@ -57,6 +57,8 @@ exe_sources = [
 
 source_directories = [
   'src',
+  'src/raylib',
+  'src/dyaml',
   'src/tinyendian'
 ]
 
