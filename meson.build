@@ -52,7 +52,8 @@ exe_sources = [
   'src/raylib/core.d',
   'src/raylib/shapes.d',
   'src/raylib/text.d',
-  'src/raylib/gui.d'
+  'src/raylib/gui.d',
+  'src/config.d'
 ]
 
 source_directories = [
