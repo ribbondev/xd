@@ -12,30 +12,30 @@ Color LIGHTGRAY = Color(200, 200, 200, 255);
 Color DARKGRAY = Color(80, 80, 80, 255);
 
 struct Color {
-  char r;
-  char g;
-  char b;
-  char a;
+    char r;
+    char g;
+    char b;
+    char a;
 }
 
 struct Vector2 {
-  float x;
-  float y;
+    float x;
+    float y;
 }
 
 struct Rectangle {
-  float x;
-  float y;
-  float width;
-  float height;
+    float x;
+    float y;
+    float width;
+    float height;
 }
 
 extern (C) {
-  export void InitWindow(int width, int height, const char *title);
-  export void SetTargetFPS(int fps);
-  export bool WindowShouldClose();
-  export void BeginDrawing();
-  export void ClearBackground(Color color);
-  export void CloseWindow();
-  export void EndDrawing();
+    export void InitWindow(int width, int height, const char *title);
+    export void SetTargetFPS(int fps);
+    export bool WindowShouldClose();
+    export void BeginDrawing();
+    export void ClearBackground(Color color);
+    export void CloseWindow();
+    export void EndDrawing();
 }

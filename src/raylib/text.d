@@ -5,5 +5,5 @@ import raylib.core;
 alias draw_text = DrawText;
 
 extern (C) {
-  export void DrawText(const char *text, int posX, int posY, int fontSize, Color color);
+    export void DrawText(const char *text, int posX, int posY, int fontSize, Color color);
 }
