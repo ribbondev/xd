@@ -16,35 +16,11 @@ raygui = static_library('raygui',
   include_directories: include_directories('deps/include'),
   c_args: ['-DRAYGUI_IMPLEMENTATION'])
 
+tinyendian = dependency('tinyendian', method: 'dub')
+dyaml = dependency('dyaml', method: 'dub')
+
 #########
 # sources
-
-# dyaml
-dyaml_sources = [
-  'src/dyaml/composer.d',
-  'src/dyaml/constructor.d',
-  'src/dyaml/dumper.d',
-  'src/dyaml/emitter.d',
-  'src/dyaml/encoding.d',
-  'src/dyaml/escapes.d',
-  'src/dyaml/event.d',
-  'src/dyaml/exception.d',
-  'src/dyaml/linebreak.d',
-  'src/dyaml/loader.d',
-  'src/dyaml/node.d',
-  'src/dyaml/package.d',
-  'src/dyaml/parser.d',
-  'src/dyaml/queue.d',
-  'src/dyaml/reader.d',
-  'src/dyaml/representer.d',
-  'src/dyaml/resolver.d',
-  'src/dyaml/scanner.d',
-  'src/dyaml/serializer.d',
-  'src/dyaml/style.d',
-  'src/dyaml/tagdirective.d',
-  'src/dyaml/token.d',
-  'src/tinyendian/tinyendian.d'
-]
 
 exe_entry_point = ['src/xd.d']
 
@@ -59,15 +35,13 @@ exe_sources = [
 source_directories = [
   'src',
   'src/raylib',
-  'src/dyaml',
-  'src/tinyendian'
 ]
 
 ##############
 # executables
 
 executable('xd',
-  sources: exe_entry_point + exe_sources + dyaml_sources,
+  sources: exe_entry_point + exe_sources,
   include_directories: source_directories,
-  dependencies: [raylib, m],
+  dependencies: [raylib, m, tinyendian, dyaml],
   link_with: raygui)
